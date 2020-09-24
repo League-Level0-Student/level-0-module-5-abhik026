@@ -6,23 +6,51 @@ package _01_algorithms._3_goofy_names;
 
 import javax.swing.JOptionPane;
 
+
 public class GoofyNames {
+	
 	public static void main(String[] args) {
 		String goofyName = "";
-
+String name = JOptionPane.showInputDialog("Name: ");
 		// 1. Ask the user to enter their name
 
-		// 2. Print upper case name to the console using .toUpperCase()
+
+		
+
+// 2. Print upper case name to the console using .toUpperCase()
 		//    Run your program to see that this works.
 
 		// 3. Loop through each character of the name (steps 4 - 6).
 		//    HINT: Use .length() to determine the number of characters in the String.
 
-			// 4. Create a String variable to store the next character of the name
-			//    using .substring(start, end)
+int i = name.length();			
+
+
+// 4. Create a String variable to store the next character of the name
+			
+
+
+for(int e = 0; e<i; e++) {
+		char letter = name.charAt(e);
+		String sub  = String.valueOf(letter);
+			
+		if(e % 2 ==0) {
+			sub = sub.toUpperCase();
+		}
+		else {
+			sub = sub.toLowerCase();
+			}
+		goofyName+=sub;
+
+}
+JOptionPane.showMessageDialog(null, goofyName);
+
+//   
+			//using .substring(start, end)
 			//    HINT: replace 'start' and 'end' to get String with character at i 
 			
-			// 5. Use MODULO to set this variable to upper case for EVEN characters
+			
+		// 5. Use MODULO to set this variable to upper case for EVEN characters
 			//    and lower case for ODD characters.
 
 			
